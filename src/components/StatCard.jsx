@@ -1,11 +1,8 @@
-export default function StatCard({ label, value, color = 'indigo', icon }) {
+export default function StatCard({ title, value }) {
   return (
-    <div className="card flex items-center justify-between">
-      <div>
-        <p className="text-gray-500 text-sm">{label}</p>
-        <p className={`text-3xl font-bold text-${color}-600`}>{value}</p>
-      </div>
-      <div className={`text-${color}-500`}>{icon}</div>
+    <div className="bg-white dark:bg-gray-800 text-black dark:text-white p-4 rounded-xl shadow transition">
+      <h3 className="text-sm opacity-70">{title}</h3>
+      <p className="text-2xl font-bold">{value}</p>
     </div>
   );
 }
