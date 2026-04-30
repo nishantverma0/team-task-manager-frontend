@@ -3,14 +3,16 @@ module.exports = {
   darkMode: "class",
 
   content: [
-    "./index.html",          // ⚠️ VERY IMPORTANT (you missed this)
-    "./src/**/*.{js,jsx}",   // your components
+    "./index.html",
+    "./src/**/*.{js,jsx}",
   ],
 
   theme: {
     extend: {
       colors: {
-        primary: "#6366f1", // indigo-500
+        primary: "#6366f1",
+        darkBg: "#0f172a",   // premium dark background
+        card: "#111827",     // card color
       },
 
       borderRadius: {
@@ -20,6 +22,15 @@ module.exports = {
 
       boxShadow: {
         soft: "0 4px 20px rgba(0,0,0,0.08)",
+        glow: "0 0 20px rgba(99,102,241,0.4)",
+      },
+
+      backdropBlur: {
+        xs: "2px",
+      },
+
+      transitionProperty: {
+        theme: "background-color, color, border-color",
       },
     },
   },
